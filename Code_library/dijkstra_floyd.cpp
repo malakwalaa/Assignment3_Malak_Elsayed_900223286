@@ -2,9 +2,9 @@
 * WARNING: Please do not remove or modify this comment block.
  *
  * Student Information:
- * Name: ______________________________________
- * Student ID: __________________________________
- * Section Number: ______________________________
+ * Name: Malak Elsayed
+ * Student ID: 900223286
+ * Section Number: Section 1
  *
  * Instructions:
  * - Fill out your name, student ID, and section number above.
