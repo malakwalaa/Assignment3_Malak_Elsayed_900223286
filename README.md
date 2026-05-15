@@ -1,8 +1,6 @@
-<h2 align="center">CSCE 2211 Fall 2025 Applied Data Structures</h2>
-<h3 align="center">Assignment #5</h3>
+<h2 align="center">CSCE 2211 Spring 2026 Applied Data Structures</h2>
+<h3 align="center">Assignment #3 Malak Elsayed 900223286</h3>
 
-> [!IMPORTANT]  
-> Avoid deduction by writing your name, section number, and ID in a comment at the beginning of each file, then push your changes. 📝
 
 <table border="0">
  <tr>
