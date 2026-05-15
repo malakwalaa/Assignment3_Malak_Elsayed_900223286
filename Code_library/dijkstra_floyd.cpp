@@ -18,31 +18,84 @@
 #include "graph.h"
 #include <vector>
 #include <queue>
+#include <functional>
 
 using namespace std;
 
 vector<int> dijkstra(int src) {
     vector<int> dist(n, 1e9);
+    // Min-heap priority queue 
+    priority_queue<
+        pair<int, int>,                       
+        vector<pair<int, int>>,              
+        greater<pair<int, int>>              // To makes it a min-heap
+    > pq;
 
-    // TODO: Initialize priority queue
-    // TODO: Set dist[src] = 0 and push into pq
-    // TODO: Write Dijkstra main loop
+    dist[src] = 0; // The distance from source to itself is equal to 0
 
-    return dist;
+    pq.push({0, src}); // push source node into priority queue
+
+    while (!pq.empty()) { // loop until pq becomes empty
+
+        int d = pq.top().first; // current shortest distance
+        int u = pq.top().second; // current node
+
+        pq.pop(); // remove top element from pq
+
+        // If the distance is greater than the recorded distance, skip 
+        if (d > dist[u])
+            continue;
+
+        // Traverse all neighbors of node u
+        for (auto edge : adjList[u]) {
+
+            int v = edge.first; // Neighbor node
+            int w = edge.second; // Edge weight
+
+            // relaxation step
+            if (dist[u] + w < dist[v]) {
+
+                dist[v] = dist[u] + w; // update shorter distance
+
+                pq.push({dist[v], v}); // push updated distance into pq
+            }
+        }
+    }
+
+    return dist; 
 }
 
 vector<vector<int>> repeatedDijkstra() {
     vector<vector<int>> all(n, vector<int>(n));
 
-    // TODO: Run dijkstra(i) for all i
+    // Run Dijkstra from every node
+    for (int i = 0; i < n; i++) {
 
-    return all;
+        all[i] = dijkstra(i); // Store shortest distances from node i
+    }
+
+    return all; // Return all-pairs shortest paths
 }
+
+
 
 vector<vector<int>> floydWarshall() {
     vector<vector<int>> dist = adjMatrix;
 
-    // TODO: Implement triple loop
+    for (int k = 0; k < n; k++) { // intermediate node
 
-    return dist;
+        for (int i = 0; i < n; i++) { // source node
+
+            for (int j = 0; j < n; j++) { // destination node
+
+                // Check if path through k is shorter
+                if (dist[i][k] + dist[k][j] < dist[i][j]) {
+
+                    dist[i][j] = dist[i][k] + dist[k][j]; // update shortest distance
+                }
+            }
+        }
+    }
+
+    return dist; 
 }
