@@ -2,65 +2,31 @@
 <h3 align="center">Assignment #3 Malak Elsayed 900223286</h3>
 
 
-<table border="0">
- <tr>
-    <td><b style="font-size:20px">📋 Prerequisites for the Assignment</b></td>
-    <td><b style="font-size:20px">🛠️ How It Works (Testing Cases)</b></td>
- </tr>
- <tr>
-    <td>
-    1. Create a <a href="https://account.jetbrains.com/login" target="_blank">JetBrains Account</a> & apply for the student pack. 🎓<br>    
-    2. Download <a href="https://www.jetbrains.com/clion/download/#section=mac" target="_blank">CLion for Windows & Mac</a> and sign in with your account. 💻<br>    
-    3. Sign in to the GitHub Desktop app on your PC. 🔗<br>  
-    4. Clone this repository to start working on the assignment. 📂<br>
-    5. Write your name and ID in a comment at the beginning of each file, then push your changes. 📝<br>
-    </td>
-    <td>
-    1. Open the repo folder as a project in CLion IDE. 🚀<br> 
-    2. Start writing your code in the <strong>Code_library</strong> directory. 🖊️<br>
-    3. After completing the required parts, go to <strong>Google_tests</strong> and run <strong>TestBTree</strong> to test your code. 🧪<br>
-    4. The test suite files will show which tests have passed and which have failed. ✅❌<br>
-    </td>
- </tr>
-</table>
-
-> [!WARNING]
-> - Your submission time affects the assignment grade; pay attention to your deadlines.
-> - You must commit and push your code to GitHub at the end of each change.
 
 ---
 
-## 🔍 Overview of the Exercise
-In this exercise, you will implement a **Dijkstra + Floyd–Warshall** in C++.  
-
-
-You will:
-1. Load a weighted directed graph from a text file.
-2. Implement Dijkstra and Floyd–Warshall inside the provided function skeletons.
-3. Call Dijkstra repeatedly (one run per node) to produce an All-Pairs Shortest Path (APSP) output.
-4. Verify correctness of outputs using provided GoogleTest testcases
+## Project Description
+Implemented dijkstra, Repeated dijkstra and floydWarshall algorithms and then using Google test cases we made sure that it preforms correctly by passing all of the test cases provided. 
 
 ---
 
-## 🧪 Testing Your Code
-- Run the tests (Google_tests/Testcases.cpp).
-- Ensure all unit tests pass before submission.
+
+
+## How to run the program and the test cases
+in the terminal:
+```cpp
+cd ~/Documents/GitHub/Assignment3_Malak_Elsayed_900223286/build
+rm -rf *
+cmake ..
+make
+
+./Google_tests/Google_Tests_run
+```
 
 ---
-
-### 📬 Submission Instructions
-- Comment your code and document any assumptions you made.
-- Do not leave `TODO` sections empty.
-- Ensure your program compiles and runs correctly in CLion.
-- Push your final solution to GitHub before the deadline.
+## Output:
+<img width="1346" height="455" alt="Screenshot 2026-05-15 at 3 07 20 PM" src="https://github.com/user-attachments/assets/34d9db7b-b895-4a8a-8e1e-cccff9720bbd" />
 
 ---
-
-📝 To-Do List
-- [ ] Implement `dijkstra(int src)`.
-- [ ] Implement `repeatedDijkstra() `.
-- [ ] Implement `floydWarshall()`.
-- [ ] Run all test cases successfully.
-- [ ] Commit and push your code regularly to GitHub.
-
-:white_check_mark: Use `git status` to list all new or modified files that haven’t yet been committed.
+## Assumptions and Notes:
+make sure all the files are there when you run
